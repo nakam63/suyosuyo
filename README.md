@@ -1,5 +1,5 @@
-# pjbase-laravel6-docker
-Laravel6 + Dockerのプロジェクトベース
+# やりたいこと
+案件と人の状況を一箇所で管理したい。
 
 <br>
 
