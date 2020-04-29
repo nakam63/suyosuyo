@@ -2,7 +2,7 @@ FROM php:7.3-fpm-alpine AS base
 
 ## add necessary packages.
 RUN apk --update add \
-    && apk add git zlib-dev libzip-dev \
+    && apk add git zlib-dev libzip-dev nodejs npm \
     && docker-php-ext-install pdo_mysql zip
 
 ## Install composer.
@@ -32,3 +32,6 @@ FROM base AS dev
 RUN apk add autoconf gcc g++ make \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug
+
+## npm run
+RUN npm -v
